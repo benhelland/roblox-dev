@@ -1,6 +1,6 @@
 # Roblox Dev Environment Setup
 
-Prerequisites: VSCode and Roblox Studio already installed.
+Prerequisites: VSCode and Roblox Studio already installed. You have already cloned this repo and opened it in VSCode.
 
 ---
 
@@ -17,10 +17,9 @@ Aftman is a toolchain version manager that installs and pins tools like Rojo, Se
 
 ## 2. Install project tools
 
-Clone or open the `roblox-dev` project in VSCode, then in the integrated terminal:
+In the VSCode integrated terminal at the project root:
 
 ```bash
-cd path/to/roblox-dev
 aftman install
 ```
 
