@@ -9,23 +9,37 @@ This is a GitHub template repository. To start a new project from it:
 1. Click **"Use this template"** → **"Create a new repository"**
 2. Name your repo, set visibility, and create it
 3. Clone your new repo and open it in VSCode
-4. Follow the setup guide below
+4. Rename `"Game"` in `default.project.json` to your project name
+5. Follow the setup guide below
 
 ## What's included
 
 ```
 aftman.toml          — pinned versions of rojo, selene, stylua
 default.project.json — Rojo project config (src/ → Studio services)
+wally.toml           — package manager config (add dependencies here)
 selene.toml          — Luau linter config (std = "roblox")
 stylua.toml          — Luau formatter config
-.gitignore           — ignores build output and sourcemaps
+.gitignore           — ignores build output, sourcemaps, and Wally packages
 src/
   server/            → ServerScriptService
-  client/            → StarterPlayerScripts
-  shared/            → ReplicatedStorage
+  player/            → StarterPlayerScripts
+  character/         → StarterCharacterScripts
+  gui/               → StarterGui
+  replicatedStorage/ → ReplicatedStorage
 ```
 
 Starter scripts in `src/` demonstrate the module pattern across server, client, and shared.
+
+## Building
+
+To build a place file from the current source:
+
+```bash
+rojo build default.project.json --output build/game.rbxl
+```
+
+Output is written to `build/` (gitignored). Rename `"Game"` in `default.project.json` to match your project before building.
 
 ## Setup
 
@@ -43,5 +57,8 @@ See [SETUP.md](SETUP.md) for the full environment setup guide, including:
 | [Rojo](https://rojo.space) | 7.4.4 | Sync files between VSCode and Roblox Studio |
 | [Selene](https://kampfkarren.github.io/selene) | 0.27.1 | Luau linter |
 | [StyLua](https://github.com/JohnnyMorganz/StyLua) | 0.20.0 | Luau formatter |
+| [Wally](https://wally.run) | optional | Luau package manager for runtime dependencies |
 
-All tools are managed by [Aftman](https://github.com/LPGhatguy/aftman) and pinned in `aftman.toml`. Run `aftman install` after cloning to install them.
+**Aftman** manages dev tools (Rojo, Selene, StyLua) — CLI binaries pinned per-project in `aftman.toml`. Run `aftman install` after cloning.
+
+**Wally** manages game dependencies (Promise, Signal, etc.) — Luau packages that end up inside your game. Add it to `aftman.toml` if you need it, then declare packages in `wally.toml` and run `wally install`. See [SETUP.md](SETUP.md) for details.

@@ -1,1 +1,6 @@
 std = "roblox"
+
+[rules]
+global_usage = "deny"
+shadowing = "warn"
+unused_variable = "warn"

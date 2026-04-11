@@ -1,5 +1,6 @@
 /bin
 /build
+/Packages
 *.rbxl
 *.rbxlx
 *.rbxl.lock
