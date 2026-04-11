@@ -2,7 +2,7 @@
   "luau-lsp.sourcemap.rojoProjectFile": "default.project.json",
   "luau-lsp.sourcemap.enabled": true,
   "luau-lsp.sourcemap.autogenerate": true,
-  "luau-lsp.types.roblox": true,
+  "luau-lsp.platform.type": "roblox",
   "luau-lsp.completion.imports.enabled": true,
   "[lua]": {
     "editor.defaultFormatter": "JohnnyMorganz.stylua",
