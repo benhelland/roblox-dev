@@ -1,32 +1,27 @@
 {
-  "name": "roblox-dev",
+  "name": "Game",
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
-      "Shared": {
-        "$path": "src/shared"
-      }
+      "$path": "src/replicatedStorage"
     },
     "ServerScriptService": {
-      "Server": {
-        "$path": "src/server"
-      }
+      "$path": "src/server"
+    },
+    "StarterGui": {
+      "$path": "src/gui"
     },
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        "Client": {
-          "$path": "src/client"
-        }
+        "$path": "src/player"
+      },
+      "StarterCharacterScripts": {
+        "$path": "src/character"
       }
     },
     "Workspace": {
       "$properties": {
         "FilteringEnabled": true
-      }
-    },
-    "HttpService": {
-      "$properties": {
-        "HttpEnabled": true
       }
     }
   }
