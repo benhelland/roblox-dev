@@ -1,3 +1,27 @@
+# Wally — Luau package manager (https://wally.run)
+#
+# SETUP (one-time):
+# 1. Add Wally to aftman.toml:
+#      wally = "UpliftGames/wally@0.3.2"
+#    Then run: aftman install
+#
+# 2. Add a Packages path to default.project.json under ReplicatedStorage:
+#      "ReplicatedStorage": {
+#        "$path": "src/replicatedStorage",
+#        "Packages": {
+#          "$path": "Packages"
+#        }
+#      }
+#
+# 3. Update the [package] name below to match your project.
+#
+# USAGE:
+# - Add dependencies to [dependencies] below, then run: wally install
+# - Packages are written to Packages/ (gitignored)
+# - Access in scripts:
+#     local Packages = game:GetService("ReplicatedStorage").Packages
+#     local Promise = require(Packages.Promise)
+
 [package]
 name = "your-name/game-name"
 version = "0.1.0"
@@ -5,6 +29,5 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-# Example:
 # Promise = "evaera/promise@4.0.0"
 # Signal = "sleitnick/signal@1.5.0"
