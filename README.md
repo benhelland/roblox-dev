@@ -27,9 +27,34 @@ src/
   character/         → StarterCharacterScripts
   gui/               → StarterGui
   replicatedStorage/ → ReplicatedStorage
+  workspace/         → Workspace
 ```
 
 Starter scripts in `src/` demonstrate the module pattern across server, client, and shared.
+
+## Daily workflow
+
+Each session, do this in order:
+
+**1. Start Rojo** (VSCode terminal):
+```bash
+rojo serve
+```
+Leave this running. It watches `src/` and syncs changes into Studio in real time.
+
+**2. Start the MCP plugin** (Roblox Studio):
+1. Open your place in Studio
+2. **Plugins** tab → click **MCP** → click **Start**
+3. The button label changes to **Stop** when the server is running
+
+Claude Code can now read and write to your live Studio session via the MCP connection.
+
+**3. Connect Rojo** (Roblox Studio):
+1. **Plugins** tab → click **Rojo** → **Connect**
+
+Files are now synced. Any save in VSCode updates the place instantly.
+
+---
 
 ## Building
 
