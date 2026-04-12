@@ -57,6 +57,8 @@ wally install
 
 Packages are written to `Packages/` (gitignored). Rojo syncs them into your game automatically.
 
+Also update the `[package]` name in `wally.toml` to match your project (e.g. `"your-name/game-name"`).
+
 Skip this step if you don't need external packages.
 
 ---
@@ -85,7 +87,7 @@ Then **restart Roblox Studio**. Open any place — the Rojo plugin will appear i
 
 ## 7. Enable HTTP Requests in your place
 
-This is required per place for both Rojo and the MCP plugin to communicate with Studio.
+This is required by the MCP plugin to communicate with Studio. Rojo does not need it.
 
 1. Open your place in Studio
 2. **Home** tab → **Game Settings** → **Security**
